@@ -14,6 +14,8 @@ namespace Abstract_Class
             Employee name = new Employee();
             name.firstName = "Sample";
             name.lastName = "Student";
+            name.ID = 1;
+            name.ID = 2;
 
             //call SayName() method on 'name' object
             name.SayName();
