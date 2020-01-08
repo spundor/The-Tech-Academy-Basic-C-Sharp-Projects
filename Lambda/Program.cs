@@ -24,28 +24,38 @@ namespace Lambda
             theEmployeeList.Add(new Employee { FirstName = "Farrah", LastName = "Jacobson", EmployeeID = 10 });
 
             //Using a foreach loop, create a new list of all employees with the first name "Joe".
-            List<Employee> newList = new List<Employee>();
-            foreach (var person in theEmployeeList)
-            {
-                if (person.FirstName == "Joe")
-                {
-                    newList.Add(person);
-                    Console.WriteLine(person.FirstName + " " + person.LastName);
-                }
-            }
-            Console.ReadLine();
-
-
-            //Do the same thing again, but this time with a lambda expression.
-            //new List<Employee> (theEmployeeList.Where(x => x.FirstName == "Joe").ToList()).ForEach(x => Console.WriteLine(x.FirstName + " " + x.LastName));
-
+            //List<Employee> newList = new List<Employee>();
+            //foreach (var person in theEmployeeList)
+            //{
+            //    if (person.FirstName == "Joe")
+            //    {
+            //        newList.Add(person);
+            //        Console.WriteLine(person.FirstName + " " + person.LastName);
+            //    }
+            //}
             //Console.ReadLine();
 
 
-            //4.Using a lambda expression, make a list of all employees with an ID number greater than 5.
-            //new List<Employee> (theEmployeeList.Where(x => x.EmployeeID > 5).ToList()).ForEach(x => Console.WriteLine(x.FirstName + " " + x.LastName));
 
-            // Console.ReadLine();
+            //3.
+            //List<Employee> joeList = theEmployeeList.Where(x => x.FirstName == "Joe").ToList();
+            //foreach (Employee employee in joeList)
+            {
+                //Console.WriteLine(employee.LastName);
+            }
+            //Console.Read();
+
+            //4.
+            List<Employee> IDList = theEmployeeList.Where(x => x.EmployeeID >5).ToList();
+            foreach (Employee employee in IDList)
+            {
+                Console.WriteLine(employee.LastName);
+            }
+            Console.Read();
+
+
+
+          
 
         }
 
